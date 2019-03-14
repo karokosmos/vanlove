@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; }
+
+.logo {
+  font-size: 4rem;
+  font-family: 'Amatic SC', cursive;
+  margin-left: .5rem;
+  display: flex;
+  margin-right: auto; }
+
+.nav {
+  display: flex;
+  list-style: none; }
+  .nav__item {
+    padding: 0 2rem;
+    font-size: 1.5rem; }
+  .nav__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500; }
+    .nav__link:hover {
+      color: #E39F5A; }
+
+.social {
+  display: flex;
+  padding-left: 3rem; }
+  .social__icon-box {
+    position: relative;
+    padding: 0 .5rem; }
+  .social__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    transition: all .1s; }
+    .social__icon:hover {
+      transform: rotate(20deg); }
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; }
+  .hero__cta-text {
+    font-size: 6.5rem;
+    font-weight: 900;
+    margin-right: -12rem;
+    position: relative;
+    z-index: 10; }
+  .hero__cta-button {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: none;
+    border-radius: 3px;
+    background-color: #94DFD3;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.8rem;
+    cursor: pointer;
+    animation: shadow-pulse 1s infinite ease-out; }
+    .hero__cta-button:focus {
+      outline: none; }
+  .hero__img {
+    width: 150%;
+    height: 90%;
+    background-image: url("/img/hero-van.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1; }
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px #bdebe3; }
+  100% {
+    box-shadow: 0 0 0 1.2rem rgba(0, 0, 0, 0); } }
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 4rem 7.5rem 2rem 7.5rem; }
+
+.content {
+  margin: 0 14rem; }

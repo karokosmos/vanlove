@@ -1,0 +1,111 @@
+/////////////////////////////////////////
+// LOGO
+.logo {
+    font-size: 4rem;
+    font-family: 'Amatic SC', cursive;
+    margin-left: .5rem;
+    // Makes logo to take up all the available space
+    display: flex;
+    margin-right: auto;
+}
+
+/////////////////////////////////////////
+// NAVIGATION
+.nav {
+    display: flex;
+    list-style: none;
+
+    &__item {
+        padding: 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-text;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// SOCIAL
+.social {
+    display: flex;
+    padding-left: 3rem;
+
+    &__icon-box {
+        position: relative;
+        padding: 0 .5rem;
+    }
+
+    &__icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        transition: all .1s;
+
+        &:hover {
+            transform: rotate(20deg);
+        }
+    }
+}
+
+/////////////////////////////////////////
+// HERO
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //padding-bottom: 2rem;
+    height: 80vh;
+
+    &__cta-text {
+        font-size: 6.5rem;
+        font-weight: 900;
+        margin-right: -12rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__cta-button {
+        margin-top: 4rem;
+        padding: 2rem;
+        border: none;
+        border-radius: 3px;
+        background-color: $color-primary;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.8rem;
+        cursor: pointer;
+        animation: shadow-pulse 1s infinite ease-out;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__img {
+        width: 150%;
+        height: 90%;
+        background-image: url("/img/hero-van.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    @keyframes shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px hsl(170, 53%, 83%);
+        }
+        100% {
+            box-shadow: 0 0 0 1.2rem rgba(0, 0, 0, 0);
+        }
+    }
+}
+
