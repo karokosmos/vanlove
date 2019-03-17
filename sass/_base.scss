@@ -7,6 +7,12 @@ $color-text: #333;
 
 $font-primary: 'Montserrat', sans-serif;
 
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // RESETS
 * {
     margin: 0;
