@@ -57,8 +57,10 @@
 // HERO
 .hero {
     @include flexbox-center;
-    //margin-bottom: 10rem;
-    height: 80vh;
+    width: 85%;
+    max-width: 1150px;
+    margin: auto;
+    height: 85vh;
 
     &__cta-text {
         font-size: 6.5rem;
@@ -72,7 +74,7 @@
         margin-top: 4rem;
         padding: 2rem;
         border: none;
-        border-radius: 3px;
+        border-radius: 2px;
         background-color: $color-primary;
         font-family: $font-primary;
         text-transform: uppercase;
@@ -147,7 +149,7 @@
 .cards {
 
     &__title {
-        @include flexbox-center;
+        text-align: center;
         font-size: 2.5rem;
         padding: 3rem 0 7rem 0;
     }
@@ -159,8 +161,8 @@
     &__card {
         width: 28rem;
         padding-bottom: 4rem;
-        border-radius: 4px;
-        box-shadow: 0 7px 15px 0 #ccc;
+        border-radius: 2px;
+        box-shadow: 0 7px 15px 0 #efefef;
         cursor: pointer;
         overflow: hidden;
         transition: all .2s;
@@ -175,15 +177,14 @@
     }
 
     &__heading {
-        @include flexbox-center;
+        text-align: center;
         font-size: 2rem;
         font-weight: 600;
         padding: 3rem 0 2rem 0;
     }
 
     &__list {
-        @include flexbox-center;
-        flex-direction: column;
+        text-align: center;
         list-style-type: none;
     }
 
@@ -211,5 +212,40 @@
             background-image: url("/img/vantype-3.jpg");
             background-color: rgba(221, 222, 102, .9);
         }
+    }
+}
+
+/////////////////////////////////////////
+// TESTIMONIALS
+
+.testimonials {
+    @include flexbox-center;
+    padding: 5rem 0;
+
+    &__img {
+        background-image: url("/img/testimonial-img.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        margin-right: 5rem;
+        flex: 0 0 auto;
+    }
+
+    &__testimonial {
+        padding: 0 5rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-top: 2rem;
     }
 }
