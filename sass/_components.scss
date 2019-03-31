@@ -51,6 +51,12 @@
             transform: rotate(20deg);
         }
     }
+
+    &--footer {
+        padding-left: 0;
+        padding-top: 3rem;
+        margin-left: -.5rem;
+    }
 }
 
 /////////////////////////////////////////
@@ -62,7 +68,7 @@
     margin: auto;
     height: 85vh;
 
-    &__cta-text {
+    &__text {
         font-size: 6.5rem;
         font-weight: 900;
         margin-right: -12rem;
@@ -70,7 +76,7 @@
         z-index: 10;
     }
 
-    &__cta-button {
+    &__btn {
         margin-top: 4rem;
         padding: 2rem;
         border: none;
@@ -247,5 +253,82 @@
         font-size: 1.4rem;
         font-weight: 600;
         padding-top: 2rem;
+    }
+}
+
+/////////////////////////////////////////
+// SUBSCRIBE
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20rem;
+
+    &__header {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    &__input {
+        border: none;
+        border-bottom: solid 2px $color-text;
+        background-color: #F6F6F6;
+        font-size: 1.2rem;
+        font-family: $font-primary;
+        padding: 1rem 0;
+        font-style: italic;
+        min-width: 20rem;
+
+        &:focus {
+            outline: none;
+        }
+    }  
+
+    &__btn {
+        width: 30%;
+        padding: 1rem;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        background-color: $color-text;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// FOOTER
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color:#F6F6F6;
+    padding: 10rem 5rem;
+
+    &__main-nav {
+        padding-right: 6rem;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: .5rem 0;
+        font-size: 1.2rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-text;
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 }

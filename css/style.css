@@ -47,6 +47,10 @@ body {
     transition: all .1s; }
     .social__icon:hover {
       transform: rotate(20deg); }
+  .social--footer {
+    padding-left: 0;
+    padding-top: 3rem;
+    margin-left: -.5rem; }
 
 .hero {
   display: flex;
@@ -56,13 +60,13 @@ body {
   max-width: 1150px;
   margin: auto;
   height: 85vh; }
-  .hero__cta-text {
+  .hero__text {
     font-size: 6.5rem;
     font-weight: 900;
     margin-right: -12rem;
     position: relative;
     z-index: 10; }
-  .hero__cta-button {
+  .hero__btn {
     margin-top: 4rem;
     padding: 2rem;
     border: none;
@@ -75,7 +79,7 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
     animation: shadow-pulse 1s infinite ease-out; }
-    .hero__cta-button:focus {
+    .hero__btn:focus {
       outline: none; }
   .hero__img {
     width: 150%;
@@ -191,6 +195,57 @@ body {
     font-size: 1.4rem;
     font-weight: 600;
     padding-top: 2rem; }
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rem; }
+  .subscribe__header {
+    font-size: 1.5rem;
+    padding-bottom: 2rem; }
+  .subscribe__input {
+    border: none;
+    border-bottom: solid 2px #333;
+    background-color: #F6F6F6;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 1rem 0;
+    font-style: italic;
+    min-width: 20rem; }
+    .subscribe__input:focus {
+      outline: none; }
+  .subscribe__btn {
+    width: 30%;
+    padding: 1rem;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #333;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 2rem; }
+    .subscribe__btn:hover {
+      background-color: #94DFD3; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #F6F6F6;
+  padding: 10rem 5rem; }
+  .footer__main-nav {
+    padding-right: 6rem; }
+  .footer__list {
+    list-style-type: none; }
+  .footer__item {
+    padding: .5rem 0;
+    font-size: 1.2rem; }
+  .footer__link {
+    text-decoration: none;
+    color: #333; }
+    .footer__link:hover {
+      color: #94DFD3; }
 
 .header {
   display: flex;
