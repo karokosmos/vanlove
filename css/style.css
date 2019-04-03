@@ -15,6 +15,25 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400; }
 
+.header {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 4rem 0 2rem 0;
+  width: 85%;
+  max-width: 1250px; }
+
+.section {
+  width: 85%;
+  max-width: 1000px;
+  margin: 12rem auto; }
+  @media only screen and (max-width: 1000px) {
+    .section {
+      margin: 10rem auto; } }
+  @media only screen and (max-width: 660px) {
+    .section {
+      margin: 6rem auto; } }
+
 .logo {
   font-size: 4rem;
   font-family: 'Amatic SC', cursive;
@@ -25,6 +44,9 @@ body {
 .nav {
   display: flex;
   list-style: none; }
+  @media only screen and (max-width: 660px) {
+    .nav {
+      display: none; } }
   .nav__item {
     padding: 0 2rem;
     font-size: 1.5rem; }
@@ -38,6 +60,9 @@ body {
 .social {
   display: flex;
   padding-left: 3rem; }
+  @media only screen and (max-width: 660px) {
+    .social {
+      display: none; } }
   .social__icon-box {
     position: relative;
     padding: 0 .5rem; }
@@ -51,6 +76,18 @@ body {
     padding-left: 0;
     padding-top: 3rem;
     margin-left: -.5rem; }
+    @media only screen and (max-width: 660px) {
+      .social--footer {
+        display: flex; } }
+
+.menu {
+  display: none; }
+  @media only screen and (max-width: 660px) {
+    .menu {
+      display: inline-block; } }
+  .menu__icon {
+    width: 3rem;
+    height: 3rem; }
 
 .hero {
   display: flex;
@@ -66,6 +103,19 @@ body {
     margin-right: -12rem;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 1200px) {
+      .hero__text {
+        font-size: 6rem; } }
+    @media only screen and (max-width: 1000px) {
+      .hero__text {
+        margin: auto;
+        font-size: 7.5rem; } }
+    @media only screen and (max-width: 660px) {
+      .hero__text {
+        font-size: 6.5rem; } }
+    @media only screen and (max-width: 400px) {
+      .hero__text {
+        font-size: 5rem; } }
   .hero__btn {
     margin-top: 4rem;
     padding: 2rem;
@@ -84,11 +134,14 @@ body {
   .hero__img {
     width: 150%;
     height: 90%;
-    background-image: url("/img/hero-van.jpg");
+    background-image: url("../img/hero-van.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 1; }
+    @media only screen and (max-width: 1000px) {
+      .hero__img {
+        display: none; } }
 
 @keyframes shadow-pulse {
   0% {
@@ -101,15 +154,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 50rem; }
+  @media only screen and (max-width: 800px) {
+    .details {
+      height: auto; } }
   .details__img {
     width: 90%;
     height: 90%;
-    background-image: url("/img/details-landscape.jpg");
+    background-image: url("../img/details-landscape.jpg");
     background-size: cover;
     background-position: top; }
+    @media only screen and (max-width: 800px) {
+      .details__img {
+        display: none; } }
   .details__text {
     padding-left: 4rem;
     width: 100%; }
+    @media only screen and (max-width: 800px) {
+      .details__text {
+        padding-left: 0; } }
   .details__title {
     font-size: 2.5rem;
     padding-bottom: 2rem; }
@@ -129,6 +191,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 800px) {
+    .cards__box {
+      flex-wrap: wrap; } }
 
 .cards__card {
   width: 28rem;
@@ -142,6 +207,15 @@ body {
     margin-right: 6rem; }
   .cards__card:hover {
     transform: scale(1.05); }
+  @media only screen and (max-width: 1000px) {
+    .cards__card:not(:last-child) {
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 800px) {
+    .cards__card {
+      margin-top: 3rem; } }
+  @media only screen and (max-width: 660px) {
+    .cards__card:not(:last-child) {
+      margin-right: 0; } }
 
 .cards__heading {
   text-align: center;
@@ -162,13 +236,13 @@ body {
   height: 18rem;
   background-blend-mode: screen; }
   .cards__img--1 {
-    background-image: url("/img/vantype.jpg");
+    background-image: url("../img/vantype.jpg");
     background-color: rgba(148, 223, 210, 0.9); }
   .cards__img--2 {
-    background-image: url("/img/vantype-2.jpg");
+    background-image: url("../img/vantype-2.jpg");
     background-color: rgba(227, 159, 90, 0.9); }
   .cards__img--3 {
-    background-image: url("/img/vantype-3.jpg");
+    background-image: url("../img/vantype-3.jpg");
     background-color: rgba(221, 222, 102, 0.9); }
 
 .testimonials {
@@ -177,7 +251,7 @@ body {
   align-items: center;
   padding: 5rem 0; }
   .testimonials__img {
-    background-image: url("/img/testimonial-img.jpg");
+    background-image: url("../img/testimonial-img.jpg");
     background-position: center;
     background-size: cover;
     width: 15rem;
@@ -185,8 +259,14 @@ body {
     border-radius: 50%;
     margin-right: 5rem;
     flex: 0 0 auto; }
+    @media only screen and (max-width: 800px) {
+      .testimonials__img {
+        display: none; } }
   .testimonials__testimonial {
     padding: 0 5rem; }
+    @media only screen and (max-width: 400px) {
+      .testimonials__testimonial {
+        padding: 0 2rem; } }
   .testimonials__text {
     font-size: 1.4rem;
     font-weight: 400;
@@ -200,6 +280,12 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 20rem; }
+  @media only screen and (max-width: 1000px) {
+    .subscribe {
+      padding-left: 6rem; } }
+  @media only screen and (max-width: 800px) {
+    .subscribe {
+      display: none; } }
   .subscribe__header {
     font-size: 1.5rem;
     padding-bottom: 2rem; }
@@ -246,19 +332,3 @@ body {
     color: #333; }
     .footer__link:hover {
       color: #94DFD3; }
-
-.header {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  padding: 4rem 0 2rem 0;
-  width: 85%;
-  max-width: 1250px; }
-
-/*.content {
-    margin: 0 14rem;
-}*/
-.section {
-  width: 85%;
-  max-width: 1000px;
-  margin: 12rem auto; }
