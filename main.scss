@@ -1,0 +1,493 @@
+// SASS VARIABLES
+$color-primary: #94DFD3;
+$color-secondary: #E39F5A;
+$color-tertiary: #DDDE66;
+
+$color-text: #333;
+
+$font-primary: 'Montserrat',
+sans-serif;
+
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// RESETS
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+// LAYOUT
+.header {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 4rem 0 2rem 0;
+    width: 85%;
+    max-width: 1250px;
+}
+
+.section {
+    width: 85%;
+    max-width: 1000px;
+    margin: 12rem auto;
+
+    @media only screen and (max-width: 1000px) {
+        margin: 10rem auto;
+    }
+
+    @media only screen and (max-width: 660px) {
+        margin: 6rem auto;
+    }
+}
+
+/////////////////////////////////////////
+// LOGO
+.logo {
+    font-size: 4rem;
+    font-family: 'Amatic SC', cursive;
+    margin-left: .5rem;
+    // Makes logo to take up all the available space
+    display: flex;
+    margin-right: auto;
+}
+
+/////////////////////////////////////////
+// NAVIGATION
+.nav {
+    display: flex;
+    list-style: none;
+
+    @media only screen and (max-width: 660px) {
+        display: none;
+    }
+
+    &__item {
+        padding: 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-text;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// SOCIAL
+.social {
+    display: flex;
+    padding-left: 3rem;
+
+    @media only screen and (max-width: 660px) {
+        display: none;
+    }
+
+    &__icon-box {
+        position: relative;
+        padding: 0 .5rem;
+    }
+
+    &__icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        transition: all .1s;
+
+        &:hover {
+            transform: rotate(20deg);
+        }
+    }
+
+    &--footer {
+        padding-left: 0;
+        padding-top: 3rem;
+        margin-left: -.5rem;
+
+        @media only screen and (max-width: 660px) {
+            display: flex;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// MENU
+.menu {
+    display: none;
+
+    @media only screen and (max-width: 660px) {
+        display: inline-block;
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/////////////////////////////////////////
+// HERO
+.hero {
+    @include flexbox-center;
+    width: 85%;
+    max-width: 1150px;
+    margin: auto;
+    height: 85vh;
+
+    &__text {
+        font-size: 6.5rem;
+        font-weight: 900;
+        margin-right: -12rem;
+        position: relative;
+        z-index: 10;
+
+        @media only screen and (max-width: 1200px) {
+            font-size: 6rem;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            margin: auto;
+            font-size: 7.5rem;
+        }
+
+        @media only screen and (max-width: 660px) {
+            font-size: 6.5rem;
+        }
+
+        @media only screen and (max-width: 400px) {
+            font-size: 5rem;
+        }
+    }
+
+    &__btn {
+        margin-top: 4rem;
+        padding: 2rem;
+        border: none;
+        border-radius: 2px;
+        background-color: $color-primary;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.8rem;
+        cursor: pointer;
+        animation: shadow-pulse 1s infinite ease-out;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__img {
+        width: 150%;
+        height: 90%;
+        background-image: url("../img/hero-van.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    @keyframes shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px hsl(170, 53%, 83%);
+        }
+
+        100% {
+            box-shadow: 0 0 0 1.2rem rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+/////////////////////////////////////////
+// DETAILS
+.details {
+    @include flexbox-center;
+    height: 50rem;
+
+    @media only screen and (max-width: 800px) {
+        height: auto;
+    }
+
+    &__img {
+        width: 90%;
+        height: 90%;
+        background-image: url("../img/details-landscape.jpg");
+        background-size: cover;
+        background-position: top;
+
+        @media only screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    &__text {
+        padding-left: 4rem;
+        width: 100%;
+
+        @media only screen and (max-width: 800px) {
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+    }
+
+    &__paragraph {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+
+        &:not(:last-child) {
+            padding: 2rem 0;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// CARDS
+.cards {
+
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 3rem 0 7rem 0;
+    }
+
+    &__box {
+        @include flexbox-center;
+
+        @media only screen and (max-width: 800px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__card {
+        width: 28rem;
+        padding-bottom: 4rem;
+        border-radius: 2px;
+        box-shadow: 0 7px 15px 0 #efefef;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all .2s;
+
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 1000px) {
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            margin-top: 3rem;
+        }
+
+        @media only screen and (max-width: 660px) {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 3rem 0 2rem 0;
+    }
+
+    &__list {
+        text-align: center;
+        list-style-type: none;
+    }
+
+    &__list-item {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    &__img {
+        background-size: cover;
+        height: 18rem;
+        background-blend-mode: screen;
+
+        &--1 {
+            background-image: url("../img/vantype.jpg");
+            background-color: rgba(148, 223, 210, .9);
+        }
+
+        &--2 {
+            background-image: url("../img/vantype-2.jpg");
+            background-color: rgba(227, 159, 90, .9);
+        }
+
+        &--3 {
+            background-image: url("../img/vantype-3.jpg");
+            background-color: rgba(221, 222, 102, .9);
+        }
+    }
+}
+
+/////////////////////////////////////////
+// TESTIMONIALS
+
+.testimonials {
+    @include flexbox-center;
+    padding: 5rem 0;
+
+    &__img {
+        background-image: url("../img/testimonial-img.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        margin-right: 5rem;
+        flex: 0 0 auto;
+
+        @media only screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    &__testimonial {
+        padding: 0 5rem;
+
+        @media only screen and (max-width: 400px) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-top: 2rem;
+    }
+}
+
+/////////////////////////////////////////
+// SUBSCRIBE
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20rem;
+
+    @media only screen and (max-width: 1000px) {
+        padding-left: 6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        display: none;
+    }
+
+    &__header {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    &__input {
+        border: none;
+        border-bottom: solid 2px $color-text;
+        background-color: #F6F6F6;
+        font-size: 1.2rem;
+        font-family: $font-primary;
+        padding: 1rem 0;
+        font-style: italic;
+        min-width: 20rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        width: 30%;
+        padding: 1rem;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        background-color: $color-text;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// FOOTER
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+    padding: 10rem 5rem;
+
+    &__main-nav {
+        padding-right: 6rem;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: .5rem 0;
+        font-size: 1.2rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-text;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
