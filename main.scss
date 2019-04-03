@@ -204,7 +204,7 @@ body {
     &__img {
         width: 150%;
         height: 90%;
-        background-image: url("../img/hero-van.jpg");
+        background-image: url("img/hero-van.jpg");
         background-size: cover;
         background-position: center;
         position: relative;
@@ -239,7 +239,7 @@ body {
     &__img {
         width: 90%;
         height: 90%;
-        background-image: url("../img/details-landscape.jpg");
+        background-image: url("img/details-landscape.jpg");
         background-size: cover;
         background-position: top;
 
@@ -348,17 +348,17 @@ body {
         background-blend-mode: screen;
 
         &--1 {
-            background-image: url("../img/vantype.jpg");
+            background-image: url("img/vantype.jpg");
             background-color: rgba(148, 223, 210, .9);
         }
 
         &--2 {
-            background-image: url("../img/vantype-2.jpg");
+            background-image: url("img/vantype-2.jpg");
             background-color: rgba(227, 159, 90, .9);
         }
 
         &--3 {
-            background-image: url("../img/vantype-3.jpg");
+            background-image: url("img/vantype-3.jpg");
             background-color: rgba(221, 222, 102, .9);
         }
     }
@@ -372,7 +372,7 @@ body {
     padding: 5rem 0;
 
     &__img {
-        background-image: url("../img/testimonial-img.jpg");
+        background-image: url("img/testimonial-img.jpg");
         background-position: center;
         background-size: cover;
         width: 15rem;
